@@ -1,0 +1,27 @@
+.supercharge {
+  &__columns {
+    @include breakpoint(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
+  &__column {
+    margin-bottom: 60px;
+    @include breakpoint(large) {
+    }
+  }
+
+  &__icon {
+    height: 48px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 36px;
+
+    @include breakpoint(large) {
+      margin-bottom: 36px;
+    }
+  }
+}

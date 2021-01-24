@@ -1,0 +1,118 @@
+footer {
+  background: $xlightGray;
+  padding: 46px 32px;
+
+  .footer-container {
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    margin-bottom: 45px;
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+    img {
+      width: 60px;
+    }
+  }
+
+  .links {
+    @include breakpoint(medium) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 25px;
+    }
+
+    @include breakpoint(large) {
+      column-gap: 90px;
+      row-gap: 20px;
+    }
+
+    a {
+      display: block;
+      color: $darkGray;
+      text-decoration: none;
+
+      margin-bottom: 20px;
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 55px;
+
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      &:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      &:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      &:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+      &:nth-child(5) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    a.facebook {
+      background-image: url("/images/icon-facebook.svg");
+    }
+
+    a.twitter {
+      background-image: url("/images/icon-twitter.svg");
+    }
+
+    a.instagram {
+      background-image: url("/images/icon-instagram.svg");
+    }
+  }
+}
